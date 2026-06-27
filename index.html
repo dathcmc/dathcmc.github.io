@@ -10,18 +10,31 @@
     <link rel="stylesheet" href="https://dathcmc.info/wp-content/themes/flatsome/assets/css/icons.css">
 
     <style>
+        /* Thiết lập mã màu chủ đạo toàn trang */
+        :root {
+            --fs-color-primary: #1a365d;
+            --fs-color-secondary: #e74c3c; 
+        }
+
         /* Cấu hình cơ bản cho trang tĩnh */
         body { font-family: 'Roboto', sans-serif; background-color: #fff; margin: 0; padding: 0; }
         .hero-portfolio h1.portfolio-hello { font-weight: 800; letter-spacing: 1px; text-shadow: 1px 1px 10px rgba(0,0,0,0.3); }
         .portfolio-tagline { font-style: italic; border-left: 3px solid #f1c40f; padding-left: 15px; }
-        .section-subtitle { color: #3498db !important; text-transform: uppercase; letter-spacing: 2px; font-weight: bold; }
+        
+        /* Đồng bộ màu chủ đạo cho các tiêu đề phụ */
+        .section-subtitle { color: var(--fs-color-primary) !important; text-transform: uppercase; letter-spacing: 2px; font-weight: bold; }
         .section-subtitle-light { color: #bdecb6 !important; text-transform: uppercase; letter-spacing: 2px; }
-        .brand-card-col { background: #273647; border-radius: 12px; transition: transform 0.3s; }
-        .brand-card-col:hover { transform: translateY(-8px); }
-        .highlight-brand { border-top: 4px solid #e74c3c; }
-        .skill-box-item { background: #ffffff; padding: 20px; border-radius: 10px; border-left: 4px solid #3498db; }
-        .portfolio-btn, .portfolio-btn-phone { border-radius: 30px !important; font-weight: bold; }
-        .portfolio-btn:hover, .portfolio-btn-phone:hover { background-color: #f1c40f !important; color: #273647 !important; }
+        
+        /* Hiệu ứng tương tác mượt mà cho các khối kinh nghiệm */
+        .brand-card-col { background: #273647; border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .brand-card-col:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+        .highlight-brand { border-top: 4px solid var(--fs-color-secondary); }
+        
+        .skill-box-item { background: #ffffff; padding: 20px; border-radius: 10px; border-left: 4px solid var(--fs-color-primary); }
+        
+        /* Đồng bộ nút bấm */
+        .portfolio-btn, .portfolio-btn-phone { border-radius: 30px !important; font-weight: bold; transition: all 0.3s ease !important; }
+        .portfolio-btn:hover, .portfolio-btn-phone:hover { background-color: #f1c40f !important; color: #273647 !important; box-shadow: 0 5px 15px rgba(241, 196, 15, 0.4); }
     </style>
 </head>
 
